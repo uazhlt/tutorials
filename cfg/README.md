@@ -1,15 +1,21 @@
 # Context-free grammars (CFGs) and production rules
 
+CFG and PFCG examples using NLTK
 
-
-## Building the docker container
+## Building the docker image
 
 ```
-docker build -f Dockerfile -t uaz-hlt/nlp-demos-cfgs .
+docker build -f Dockerfile -t uazhlt/cfg-demo .
 ```
 
-## Running the assignment notebook
+## Running the example notebook
 
+### Option 1
+```
+./launch.sh
+```
+
+### Option 2
 ```
 # NOTE: this incantation assumes you're running the command 
 # from the project root. Changes to files under notebooks 
@@ -18,11 +24,18 @@ docker build -f Dockerfile -t uaz-hlt/nlp-demos-cfgs .
 docker run --rm -it \
   -p 7777:9999 \
   -v "${PWD}/notebooks:/app/examples" \
-  uaz-hlt/nlp-demos-cfgs:latest sh scripts/launch-notebook.sh
+  uazhlt/cfg-demo:latest sh scripts/launch-notebook.sh
 ```
-Open [localhost:7777](http://localhost:7777) to and navigate to `examples` to view the notebooks.
+
+Open [localhost:7777](http://localhost:7777) and navigate to `examples` to view the notebooks.
 
 # Misc
+
+## Unfamiliar with `git`?
+
+You may find this tutorial useful:
+
+- https://www.atlassian.com/git/tutorials/saving-changes
 
 ## Removing old docker containers, images, etc.
 
