@@ -8,16 +8,33 @@ Jupyter-based demo of `sklearn` NLP library.
 docker build -f Dockerfile -t uazhlt/sklearn-demo .
 ```
 
-## Running the container
+# Running the demo
 
 ```
-docker run -p "7777:9999" -it uazhlt/sklearn-demo:latest
+# NOTE: this incantation assumes you're running the command 
+# from the project root. Changes to files under notebooks 
+# will be written from client to host.
+
+docker run -it \
+  -p 7777:9999 \
+  -v "${PWD}/notebooks:/app/notebooks" \
+  uazhlt/sklearn-demo:latest
 ```
 
 Open [localhost:7777](http://localhost:7777) and navigate to [`notebooks`](http://localhost:7777/tree/notebooks) to view the notebooks.
 
 # Misc
 
-## Removing old docker containers, images, etc.
+## Unfamiliar with `git`?
 
-If you want to save some space on your machine by removing images and containers you're no longer using, [see the instructions here](https://docs.docker.com/config/pruning/).  As always, use caution when deleting things.
+You may find these links useful:
+
+- https://parsertongue.org/lessons/git-basics
+- https://parsertongue.org/lessons/github-intro
+
+## Unfamiliar with `docker`?
+
+You may find these links useful:
+
+- https://parsertongue.org/lessons/docker-intro
+- https://parsertongue.org/lessons/containers-intro

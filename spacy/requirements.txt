@@ -1,6 +1,0 @@
-jupyter==1.0.0
-pandas==0.25.3
-# see https://github.com/huggingface/neuralcoref/issues/158
-spacy==2.1.0
-spacy-lookups-data==0.2.0
-neuralcoref==4.0
