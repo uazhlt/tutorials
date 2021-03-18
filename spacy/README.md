@@ -40,12 +40,12 @@ docker run -v "${PWD}/notebooks:/app/export" -it uazhlt/spacy-demo:latest jupyte
 
 You may find these links useful:
 
-- https://parsertongue.org/lessons/git-basics
-- https://parsertongue.org/lessons/github-intro
+- https://parsertongue.org/tutorials/git-basics
+- https://parsertongue.org/tutorials/github-intro
 
 ## Unfamiliar with `docker`?
 
 You may find these links useful:
 
-- https://parsertongue.org/lessons/docker-intro
-- https://parsertongue.org/lessons/containers-intro
+- https://parsertongue.org/tutorials/docker-intro
+- https://parsertongue.org/tutorials/containers-intro
